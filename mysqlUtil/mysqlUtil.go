@@ -9,8 +9,8 @@ import (
 var db *sql.DB
 
 func init() {
-	// db, _ = sql.Open("mysql", "root:Iknowthat@tcp(127.0.0.1:3306)/eb_optimizetest?charset=utf8")
-	db, _ = sql.Open("mysql", "remote:Iknowthat@tcp(115.159.79.85:3306)/eb_optimizetest?charset=utf8")
+	db, _ = sql.Open("mysql", "root:Iknowthat@tcp(127.0.0.1:3306)/eb_optimizetest?charset=utf8")
+	// db, _ = sql.Open("mysql", "remote:Iknowthat@tcp(115.159.79.85:3306)/eb_optimizetest?charset=utf8")
 	db.SetMaxIdleConns(10)
 	db.SetMaxOpenConns(20)
 	err := db.Ping()
