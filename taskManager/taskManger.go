@@ -41,6 +41,7 @@ var taskListLen int
 
 func GetTask(task_status int) Task {
 	mu.Lock()
+
 	var task Task
 	if taskListLen > 0 && taskListLen-1 != index {
 		index++
@@ -61,6 +62,13 @@ func GetTask(task_status int) Task {
 
 	mu.Unlock()
 	return task
+}
+
+func reset_task() {
+	var sql string = "update eb_task set task_execed_times = 0,task_success_times = 0"
+	mysqlUtil.Insert(sql)
+	time.Sleep(60 * time.Second)
+
 }
 
 func getTaskList() ([]Task, error) {
