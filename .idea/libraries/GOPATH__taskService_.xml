@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;taskService&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../changeip" />
+      <root url="file://$PROJECT_DIR$/../eb_project" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../taskService1" />
+    </CLASSES>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../changeip" />
+      <root url="file://$PROJECT_DIR$/../eb_project" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../taskService1" />
+    </SOURCES>
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>

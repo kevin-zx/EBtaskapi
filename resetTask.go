@@ -1,9 +1,10 @@
 package main
 
 import (
-	"./mysqlUtil"
+
 	"fmt"
 	"time"
+	"taskService/mysqlServer"
 )
 
 func main() {
@@ -11,7 +12,7 @@ func main() {
 		if time.Now().Hour() == 23 {
 			if time.Now().Minute() == 59 {
 				var sql string = "update eb_task set task_execed_times = 0,task_success_times = 0"
-				mysqlUtil.Insert(sql)
+				mysqlServer.MysqlServer.Insert(sql)
 				fmt.Println("restart")
 				fmt.Println(time.Now())
 				time.Sleep(60 * time.Second)

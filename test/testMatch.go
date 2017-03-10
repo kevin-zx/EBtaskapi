@@ -1,10 +1,11 @@
 package main
 
 import (
-	"../matchinfomanager"
+	//"../matchinfomanager"
 	"fmt"
 	// "time"
 	// "reflect"
+	"taskService/matchinfomanager"
 )
 
 type as struct {

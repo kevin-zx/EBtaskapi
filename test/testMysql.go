@@ -3,10 +3,9 @@ package main
 // import "database/sql"
 // import _ "github.com/go-sql-driver/mysql"
 
-import "fmt"
 import (
-	"../taskManager"
-	// "log"
+	"fmt"
+	"taskService/taskManager"
 )
 
 type test struct {

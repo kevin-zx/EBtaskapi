@@ -1,9 +1,8 @@
 package main
 
 import (
-	// log "./logger"
-	"./taskManager"
-	"./taskResult"
+	"taskService/taskManager"
+	"taskService/taskResult"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -11,7 +10,9 @@ import (
 )
 
 func getTask(w http.ResponseWriter, r *http.Request) {
+	println(r.RemoteAddr)
 	r.Close = true
+	// taskType := r.URL.Query().Get("task_type")
 	task := taskManager.GetTask(1)
 	// fmt.Println(task)
 	b, err := json.Marshal(&task)
@@ -24,6 +25,38 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(w, string(b))
 	}
 
+}
+
+func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
+	r.Close = true
+	platformid := r.URL.Query().Get("platformid")
+	device := r.URL.Query().Get("device")
+	task := taskManager.GetTaskByType(platformid, device,"","")
+	b, err := json.Marshal(&task)
+	r.Header.Set("Accept-Encoding", "")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(string(b))
+		io.WriteString(w, string(b))
+	}
+}
+
+func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
+	r.Close = true
+	platformid := r.URL.Query().Get("platformid")
+	device := r.URL.Query().Get("device")
+	province := r.URL.Query().Get("province")
+	city := r.URL.Query().Get("city")
+	task := taskManager.GetTaskByType(platformid, device, province, city)
+	b, err := json.Marshal(&task)
+	r.Header.Set("Accept-Encoding", "")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(string(b))
+		io.WriteString(w, string(b))
+	}
 }
 
 func handResult(w http.ResponseWriter, r *http.Request) {
@@ -49,8 +82,10 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 
 	area := r.URL.Query().Get("area")
 	device := r.URL.Query().Get("device")
+
+	account := r.URL.Query().Get("account")
 	fmt.Printf("task_id:%s,ip:%s,port:%s,elapsed:%s,area:%s,device:%s,success_status:%s\r\n", task_id, ip, port, elapsed, area, device, success_status)
-	err := taskResult.HandlerResult(task_id, success_status, ip, port, elapsed, area, device)
+	err := taskResult.HandlerResult(task_id, success_status, ip, port, elapsed, area, device, account)
 	if err == nil {
 		io.WriteString(w, "{\"status\":\"ok\"}")
 	} else {
@@ -60,10 +95,9 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// log.SetConsole(true)
-	// log.SetRollingFile("serverMangerLog", "server.log", 10, 5, log.KB)
-	// log.SetLevel(log.INFO)
 	http.HandleFunc("/getTask", getTask)
+	http.HandleFunc("/getTaskByPlatform", getTaskByPlatform)
+	http.HandleFunc("/getTaskByArgs", getTaskByArgs)
 	http.HandleFunc("/handResult", handResult)
 	http.ListenAndServe(":19922", nil)
 }

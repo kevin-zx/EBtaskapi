@@ -1,9 +1,10 @@
 package main
 
 import (
-	"../taskManager"
+	//"../taskManager"
 	// "encoding/json"
 	"fmt"
+	"taskService/taskManager"
 )
 
 func main() {
