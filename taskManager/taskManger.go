@@ -167,6 +167,7 @@ func getTaskList() ([]Task, error) {
 	DESC 
 	LIMIT 200
 	`
+	println(sql)
 	resultData, err := mysqlServer.MysqlServer.SelectAll(sql)
 	if err != nil {
 		return nil, err
@@ -207,9 +208,12 @@ func getTaskQueue(platform string){
 		LIMIT 200`
 	if platform != "" && platform != "-1" {
 		platform = "AND eb_task.platform_id = "+ platform
+		sql = fmt.Sprintf(sqlFormatStr, platform)
+	}else {
+		sql = fmt.Sprintf(sqlFormatStr, "")
 	}
-	sql = fmt.Sprintf(sqlFormatStr, platform)
-	//println(sql)
+
+	println(sql)
 	resultData, err := mysqlServer.MysqlServer.SelectAll(sql)
 
 	if err != nil {

@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="425a321a-72cf-4c7e-8bf8-887de7d59a6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/testqueue.go" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/logger/logger.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysqlUtil/mysqlUtil.go" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testHttpService.go" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matchinfomanager/matchinfoManager.go" afterPath="$PROJECT_DIR$/matchinfomanager/matchinfoManager.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resetTask.go" afterPath="$PROJECT_DIR$/resetTask.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskHttpService.go" afterPath="$PROJECT_DIR$/taskHttpService.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskManager/taskManger.go" afterPath="$PROJECT_DIR$/taskManager/taskManger.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskResult/taskResult.go" afterPath="$PROJECT_DIR$/taskResult/taskResult.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/testMatch.go" afterPath="$PROJECT_DIR$/test/testMatch.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/testMysql.go" afterPath="$PROJECT_DIR$/test/testMysql.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/testTaskGet.go" afterPath="$PROJECT_DIR$/test/testTaskGet.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="taskHttpService.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="taskHttpService.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taskHttpService.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-319">
-              <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="18" />
+            <state relative-caret-position="608">
+              <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
               <folding>
                 <element signature="e#14#119#0" expanded="true" />
               </folding>
@@ -40,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskManger.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="taskManger.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="68" column="71" lean-forward="false" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+            <state relative-caret-position="425">
+              <caret line="212" column="51" lean-forward="false" selection-start-line="212" selection-start-column="51" selection-end-line="212" selection-end-column="51" />
               <folding>
                 <element signature="e#21#142#0" expanded="true" />
               </folding>
@@ -57,6 +46,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
               <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matchinfoManager.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matchinfomanager/matchinfoManager.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="41" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -130,6 +129,16 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taskService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="taskService" />
@@ -304,7 +313,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -312,18 +321,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25820106" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25820106" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,16 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matchinfomanager/matchinfoManager.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#26#82#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resetTask.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -716,22 +715,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
+    <entry file="file://$PROJECT_DIR$/matchinfomanager/matchinfoManager.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="68" column="71" lean-forward="false" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
-          <folding>
-            <element signature="e#21#142#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="441">
+          <caret line="33" column="60" lean-forward="false" selection-start-line="33" selection-start-column="60" selection-end-line="41" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/taskHttpService.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="44" column="18" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="18" />
+        <state relative-caret-position="608">
+          <caret line="50" column="69" lean-forward="false" selection-start-line="50" selection-start-column="69" selection-end-line="50" selection-end-column="69" />
           <folding>
             <element signature="e#14#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="212" column="51" lean-forward="false" selection-start-line="212" selection-start-column="51" selection-end-line="212" selection-end-column="51" />
+          <folding>
+            <element signature="e#21#142#0" expanded="true" />
           </folding>
         </state>
       </provider>
