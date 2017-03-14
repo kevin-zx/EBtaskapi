@@ -26,7 +26,7 @@ func HandlerResult(task_id string, success_status string, ip string, port string
 	mu.Lock()
 	defer mu.Unlock()
 	resultSlice = append(resultSlice, re)
-	if len(resultSlice) >= 5 {
+	if len(resultSlice) >= 1 {
 		err := insertResult()
 		resultSlice = *new([]Result)
 		if err != nil {
