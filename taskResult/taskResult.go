@@ -39,7 +39,7 @@ func HandlerResult(task_id string, success_status string, ip string, port string
 func insertResult() error {
 	sql := "INSERT INTO eb_result (`task_id`,`success_status`,`ip`,`port`,`elapsed`,`insert_date`,`area`,`device`) VALUE (?,?,?,?,?,NOW(),?,?)"
 	updateSql := "update eb_task set task_success_times = task_success_times + ?,task_execed_times = task_execed_times + 1 where task_id = ?"
-	updateAccSql := "UPDATE eb_account SET exec_count = exec_count + 1 WHERE account = ?"
+	updateAccSql := "UPDATE eb_account SET exec_count = exec_count + 1, success_count=success_count + (?) WHERE account = ?"
 	var insertVals [][]interface{}
 	var updateVals [][]interface{}
 	var updateAccountVals [][]interface{}
@@ -48,7 +48,8 @@ func insertResult() error {
 		insertVals = append(insertVals, val)
 		updateVals = append(updateVals, []interface{}{result.Success_status, result.Task_id})
 		if result.Account != ""{
-			updateAccountVals = append(updateAccountVals, []interface{}{result.Account})
+
+			updateAccountVals = append(updateAccountVals, []interface{}{result.Success_status,result.Account})
 		}
 
 	}
@@ -63,7 +64,9 @@ func insertResult() error {
 	if len(updateAccountVals) >0 {
 		err = mysqlServer.MysqlServer.ExecBatch(updateAccSql, updateAccountVals)
 	}
+
 	if err != nil {
+		println(err.Error())
 		return err
 	}
 	return nil
