@@ -31,7 +31,7 @@ func initMap() {
 
 func getAllMatchInfoFromDB() map[int][]TaskMatchInfo {
 	tmpMatchInfoMap := make(map[int][]TaskMatchInfo)
-	resultData, _ := mysqlServer.MysqlServer.SelectAll(`SELECT
+	resultData, _ := mysqlServer.MysqlServerInstance.SelectAll(`SELECT
 		eb_task_match_info.task_id,
 		match_type_id,
 		match_info,

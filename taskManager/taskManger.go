@@ -36,8 +36,13 @@ var mu sync.Mutex
 var taskListLen int
 var taskMapList map[int]*list.List = make(map[int]*list.List)
 
+func ForbiddenAccount(account string){
+	forbiddenAccountSql := "UPDATE eb_account SET status = 0 WHERE account = ?"
+	mysqlServer.MysqlServerInstance.Exec(forbiddenAccountSql,account)
+}
+
 func GetTaskByType(platform_id string, device string, province string, city string) Task  {
-	var task Task
+  	var task Task
 	var taskList *list.List
 	var taskEle *list.Element
 	task_type_int, err := strconv.Atoi(platform_id)
@@ -81,30 +86,19 @@ func getAccount(device string, platform_id string, province string, city string)
 	}
 
 	condition := ""
-	//if device != ""{
-	//	condition += "device='"+device+"'"
-	//}
-	//if province !=""{
-	//	if condition != "" {
-	//		condition +=" AND"
-	//	}
-	//	condition += " province='"+province+"'"
-	//}
-	println("city")
-	println(city)
 	if city != "" {
 		if condition != "" {
 			condition +=" AND"
 		}
 		condition += " city='" + city + "'"
 	}
-	print(city)
+	//print(city)
 	//如果条件里面有内容才会去获取condition
 	if condition != "" {
-		sql_format :="SELECT * FROM eb_account WHERE %s AND (exec_count/%d)< TIMESTAMPDIFF(MINUTE, DATE_FORMAT(NOW(),'%%Y-%%m-%%d 00:00:00'),NOW())/1440 ORDER BY RAND() LIMIT 1"
+		sql_format :="SELECT * FROM eb_account WHERE %s AND (exec_count/%d)< TIMESTAMPDIFF(MINUTE, DATE_FORMAT(NOW(),'%%Y-%%m-%%d 00:00:00'),NOW())/1440 AND status = 1 ORDER BY RAND() LIMIT 1"
 		sql := fmt.Sprintf(sql_format, condition, account_max_exec_time)
-		println(sql)
-		results, err :=  mysqlServer.MysqlServer.SelectAll(sql)
+		//println(sql)
+		results, err :=  mysqlServer.MysqlServerInstance.SelectAll(sql)
 		if err == nil{
 			for _,result := range *results{
 				acc = Account{Account:result["account"],Password:result["passwd"],Platform:platform,Device:device}
@@ -145,7 +139,7 @@ func GetTask(task_status int) Task {
 
 func reset_task() {
 	var sql string = "update eb_task set task_execed_times = 0,task_success_times = 0"
-	mysqlServer.MysqlServer.Insert(sql)
+	mysqlServer.MysqlServerInstance.Insert(sql)
 	time.Sleep(60 * time.Second)
 
 }
@@ -168,7 +162,7 @@ func getTaskList() ([]Task, error) {
 	LIMIT 200
 	`
 	println(sql)
-	resultData, err := mysqlServer.MysqlServer.SelectAll(sql)
+	resultData, err := mysqlServer.MysqlServerInstance.SelectAll(sql)
 	if err != nil {
 		return nil, err
 	}
@@ -214,7 +208,7 @@ func getTaskQueue(platform string){
 	}
 
 	println(sql)
-	resultData, err := mysqlServer.MysqlServer.SelectAll(sql)
+	resultData, err := mysqlServer.MysqlServerInstance.SelectAll(sql)
 
 	if err != nil {
 		println(err)

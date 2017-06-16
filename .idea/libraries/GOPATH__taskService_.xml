@@ -1,18 +1,46 @@
 <component name="libraryTable">
   <library name="GOPATH &lt;taskService&gt;">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../changeip" />
       <root url="file://$PROJECT_DIR$/../eb_project" />
-      <root url="file://$PROJECT_DIR$/../github.com" />
-      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../AutoUpdate" />
+      <root url="file://$PROJECT_DIR$/../eb_rank_optimize" />
+      <root url="file://$PROJECT_DIR$/../dog-tunnel" />
+      <root url="file://$PROJECT_DIR$/../nrspider" />
+      <root url="file://$PROJECT_DIR$/../relate_keyword_api" />
+      <root url="file://$PROJECT_DIR$/../relate_keyword" />
       <root url="file://$PROJECT_DIR$/../taskService1" />
+      <root url="file://$PROJECT_DIR$/../EBtaskManager" />
+      <root url="file://$PROJECT_DIR$/../changeip" />
+      <root url="file://$PROJECT_DIR$/../littletool" />
+      <root url="file://$PROJECT_DIR$/../keywordsyn" />
+      <root url="file://$PROJECT_DIR$/../gop2p" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../ptopproxy" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../taobaotoutiao" />
+      <root url="file://$PROJECT_DIR$/../httplog" />
     </CLASSES>
     <SOURCES>
-      <root url="file://$PROJECT_DIR$/../changeip" />
       <root url="file://$PROJECT_DIR$/../eb_project" />
-      <root url="file://$PROJECT_DIR$/../github.com" />
-      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../AutoUpdate" />
+      <root url="file://$PROJECT_DIR$/../eb_rank_optimize" />
+      <root url="file://$PROJECT_DIR$/../dog-tunnel" />
+      <root url="file://$PROJECT_DIR$/../nrspider" />
+      <root url="file://$PROJECT_DIR$/../relate_keyword_api" />
+      <root url="file://$PROJECT_DIR$/../relate_keyword" />
       <root url="file://$PROJECT_DIR$/../taskService1" />
+      <root url="file://$PROJECT_DIR$/../EBtaskManager" />
+      <root url="file://$PROJECT_DIR$/../changeip" />
+      <root url="file://$PROJECT_DIR$/../littletool" />
+      <root url="file://$PROJECT_DIR$/../keywordsyn" />
+      <root url="file://$PROJECT_DIR$/../gop2p" />
+      <root url="file://$PROJECT_DIR$/../github.com" />
+      <root url="file://$PROJECT_DIR$/../ptopproxy" />
+      <root url="file://$PROJECT_DIR$/../golang.org" />
+      <root url="file://$PROJECT_DIR$/../taobaotoutiao" />
+      <root url="file://$PROJECT_DIR$/../httplog" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />
