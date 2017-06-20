@@ -8,6 +8,9 @@ import (
 	"sync"
 	"time"
 	"container/list"
+	"github.com/kevin-zx/go-util/errorUtil"
+	"github.com/kevin-zx/go-util/dateUtil"
+	"strings"
 )
 
 type Task struct {
@@ -83,6 +86,8 @@ func getAccount(device string, platform_id string, province string, city string)
 	var acc Account = Account{}
 	if platform_id == "1" || platform_id == "2" || platform_id == "3"{
 		platform = "taobao"
+	}else {
+		return Account{}
 	}
 
 	condition := ""
@@ -91,6 +96,8 @@ func getAccount(device string, platform_id string, province string, city string)
 			condition +=" AND"
 		}
 		condition += " city='" + city + "'"
+	}else {
+		return Account{}
 	}
 	//print(city)
 	//如果条件里面有内容才会去获取condition
@@ -135,6 +142,15 @@ func GetTask(task_status int) Task {
 
 	mu.Unlock()
 	return task
+}
+
+//验证ip是否可用
+func ValidateIp(remote_ip string) bool {
+	two_hour_before_date := dateUtil.GetDeltaDate(-2*time.Hour)
+	remote_ip = strings.Split(remote_ip,":")[0]
+	data,err := mysqlServer.MysqlServerInstance.SelectAll("SELECT * FROM eb_result WHERE ip = ? AND error_type = 1 and insert_date > ? LIMIT 1",remote_ip,two_hour_before_date)
+	errorUtil.CheckErrorExit(err)
+	return len(*data)== 0
 }
 
 func reset_task() {

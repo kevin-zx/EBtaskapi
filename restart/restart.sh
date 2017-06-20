@@ -1,2 +1,2 @@
-kill -s 9 `ps -aux | grep taskHttpService | awk '{print $2}'`
-nohup go run ../taskHttpService.go &
+kill -s 9 `ps -aux | grep taskService | awk '{print $2}'`
+nohup go run ../taskService.go &

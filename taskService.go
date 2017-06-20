@@ -10,9 +10,12 @@ import (
 )
 
 func getTask(w http.ResponseWriter, r *http.Request) {
-	println(r.RemoteAddr)
+	//println(r.RemoteAddr)
 	r.Close = true
-	task := taskManager.GetTask(1)
+	task := taskManager.Task{}
+	if taskManager.ValidateIp(r.RemoteAddr){
+		task = taskManager.GetTask(1)
+	}
 	b, err := json.Marshal(&task)
 	r.Header.Set("Accept-Encoding", "")
 	if err != nil {
@@ -40,6 +43,7 @@ func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
 
 func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
 	r.Close = true
+	//println(r.RemoteAddr)
 	platformId := r.URL.Query().Get("platformId")
 	device := r.URL.Query().Get("device")
 	province := r.URL.Query().Get("province")
@@ -78,6 +82,7 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 	area := r.URL.Query().Get("area")
 	device := r.URL.Query().Get("device")
 	account := r.URL.Query().Get("account")
+	//error_type
 	error_type := r.URL.Query().Get("error_type")
 
 	fmt.Printf("task_id:%s,ip:%s,port:%s,elapsed:%s,area:%s,device:%s,success_status:%s, error_type:%s\r\n", task_id, ip, port, elapsed, area, device, success_status, error_type)
