@@ -15,6 +15,7 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 	task := taskManager.Task{}
 	if taskManager.ValidateIp(r.RemoteAddr){
 		task = taskManager.GetTask(1)
+		println("获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}else{
 		println("没有获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}
