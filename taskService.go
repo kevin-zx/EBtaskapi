@@ -15,6 +15,8 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 	task := taskManager.Task{}
 	if taskManager.ValidateIp(r.RemoteAddr){
 		task = taskManager.GetTask(1)
+	}else{
+		println("没有获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}
 	b, err := json.Marshal(&task)
 	r.Header.Set("Accept-Encoding", "")
