@@ -15,7 +15,7 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 	task := taskManager.Task{}
 	if taskManager.ValidateIp(r.RemoteAddr){
 		task = taskManager.GetTask(1)
-		println("获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
+		//println("获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}else{
 		println("没有获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}
@@ -24,7 +24,7 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(string(b))
+		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
 }
@@ -39,7 +39,7 @@ func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(string(b))
+		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
 }
@@ -57,7 +57,7 @@ func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(string(b))
+		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
 }
