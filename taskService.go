@@ -24,7 +24,9 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(string(b))
+		if task.Task_id != 0{
+			fmt.Println(string(b))
+		}
 		io.WriteString(w, string(b))
 	}
 }
