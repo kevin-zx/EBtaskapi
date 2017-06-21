@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="425a321a-72cf-4c7e-8bf8-887de7d59a6c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskManager/taskManger.go" afterPath="$PROJECT_DIR$/taskManager/taskManger.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskService.go" afterPath="$PROJECT_DIR$/taskService.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="taskService.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="taskService.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taskService.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="64" column="57" lean-forward="true" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+            <state relative-caret-position="76">
+              <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
               <folding>
                 <element signature="e#14#119#0" expanded="true" />
               </folding>
@@ -40,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taskManger.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="taskManger.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="14" />
+            <state relative-caret-position="265">
+              <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="156" />
               <folding>
                 <element signature="e#21#234#0" expanded="true" />
               </folding>
@@ -55,8 +54,18 @@
       <file leaf-file-name="restart.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/restart/restart.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="19">
+              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restart_v01.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/restart/restart_v01.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -130,9 +139,9 @@
         <option value="$PROJECT_DIR$/taskResult/taskResult.go" />
         <option value="$PROJECT_DIR$/taskResult/taskResult.go" />
         <option value="$PROJECT_DIR$/restart/restart.sh" />
-        <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
-        <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
         <option value="$PROJECT_DIR$/taskService.go" />
+        <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
+        <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
       </list>
     </option>
   </component>
@@ -598,13 +607,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mysqlServer/task_model.go" />
-    <entry file="file://$PROJECT_DIR$/restart/restart_v01.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matchinfomanager/matchinfoManager.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -713,24 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restart/restart.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="106" column="14" lean-forward="false" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="14" />
-          <folding>
-            <element signature="e#21#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resetTask.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -739,12 +723,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/restart/restart.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/restart/restart_v01.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/taskService.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="64" column="57" lean-forward="true" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+        <state relative-caret-position="76">
+          <caret line="85" column="32" lean-forward="true" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
           <folding>
             <element signature="e#14#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="151" column="4" lean-forward="false" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="156" />
+          <folding>
+            <element signature="e#21#234#0" expanded="true" />
           </folding>
         </state>
       </provider>
