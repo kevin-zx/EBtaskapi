@@ -146,7 +146,7 @@ func GetTask(task_status int) Task {
 
 //验证ip是否可用
 func ValidateIp(remote_ip string) bool {
-	two_hour_before_date := dateUtil.GetDeltaDate(-30*time.Minute)
+	two_hour_before_date := dateUtil.GetDeltaDate(-10*time.Minute)
 	remote_ip = strings.Split(remote_ip,":")[0]
 	//data,err := mysqlServer.MysqlServerInstance.SelectAll("SELECT * FROM eb_result WHERE ip = ? AND error_type = 1 and insert_date > ? LIMIT 1",remote_ip,two_hour_before_date)
 	data,err := mysqlServer.MysqlServerInstance.SelectAll("SELECT * FROM eb_result WHERE ip = ? AND insert_date > ? LIMIT 1",remote_ip,two_hour_before_date)
