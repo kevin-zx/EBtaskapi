@@ -17,16 +17,16 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 		task = taskManager.GetTask(1)
 		//println("获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}else{
-		println("没有获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
+		//println("没有获取到任务，ip 是 ", r.RemoteAddr,"---------------------------------------")
 	}
 	b, err := json.Marshal(&task)
 	r.Header.Set("Accept-Encoding", "")
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		if task.Task_id != 0{
-			fmt.Println(string(b))
-		}
+		//if task.Task_id != 0{
+		//	fmt.Println(string(b))
+		//}
 		io.WriteString(w, string(b))
 	}
 }
