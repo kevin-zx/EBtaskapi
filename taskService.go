@@ -29,6 +29,8 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 		//}
 		io.WriteString(w, string(b))
 	}
+	r.Body.Close()
+	//r.
 }
 
 func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
@@ -44,6 +46,7 @@ func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
 		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
+	r.Body.Close()
 }
 
 func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
@@ -62,6 +65,7 @@ func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
 		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
+	r.Body.Close()
 }
 
 func handResult(w http.ResponseWriter, r *http.Request) {
@@ -97,12 +101,14 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 	} else {
 		io.WriteString(w, "{\"status\":\"err\",\"message\":\""+err.Error()+"\"}")
 	}
+	r.Body.Close()
 	// log.Info(fmt.Sprintf("remote:ip,", ...))
 }
 func forbiddenAccount(w http.ResponseWriter, r *http.Request) {
 	account := r.URL.Query().Get("account")
 	taskManager.ForbiddenAccount(account)
 	io.WriteString(w,"{\"status\":\"ok\"}")
+	r.Body.Close()
 }
 func main() {
 	port := 19922
@@ -112,5 +118,6 @@ func main() {
 	http.HandleFunc("/handResult", handResult)
 	http.HandleFunc("/forbiddenAccount", forbiddenAccount)
 	fmt.Printf("listen at port %d", port)
+	
 	http.ListenAndServe(":19922", nil)
 }

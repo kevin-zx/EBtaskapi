@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="425a321a-72cf-4c7e-8bf8-887de7d59a6c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysqlServer/mysql_server.go" afterPath="$PROJECT_DIR$/mysqlServer/mysql_server.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/taskService.go" afterPath="$PROJECT_DIR$/taskService.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="taskService.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="taskService.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taskService.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1767">
-              <caret line="93" column="30" lean-forward="false" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
+            <state relative-caret-position="445">
+              <caret line="120" column="4" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
               <folding>
                 <element signature="e#14#119#0" expanded="true" />
               </folding>
@@ -42,7 +42,7 @@
       <file leaf-file-name="taskManger.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="-152">
               <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
               <folding>
                 <element signature="e#21#234#0" expanded="true" />
@@ -81,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mysql_server.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mysql_server.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysqlServer/mysql_server.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -142,9 +142,9 @@
         <option value="$PROJECT_DIR$/restart/restart.sh" />
         <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
         <option value="$PROJECT_DIR$/taskManager/taskManger.go" />
-        <option value="$PROJECT_DIR$/taskService.go" />
         <option value="$PROJECT_DIR$/../github.com/kevin-zx/go-util/mysqlUtil/mysqlutil.go" />
         <option value="$PROJECT_DIR$/mysqlServer/mysql_server.go" />
+        <option value="$PROJECT_DIR$/taskService.go" />
       </list>
     </option>
   </component>
@@ -718,31 +718,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding>
-            <element signature="e#21#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/kevin-zx/go-util/mysqlUtil/mysqlutil.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/taskService.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1767">
-          <caret line="93" column="30" lean-forward="false" selection-start-line="93" selection-start-column="30" selection-end-line="93" selection-end-column="30" />
-          <folding>
-            <element signature="e#14#119#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -760,6 +740,26 @@
           <caret line="8" column="54" lean-forward="false" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
           <folding>
             <element signature="e#21#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taskManager/taskManger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+          <folding>
+            <element signature="e#21#234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taskService.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="120" column="4" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="4" />
+          <folding>
+            <element signature="e#14#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
