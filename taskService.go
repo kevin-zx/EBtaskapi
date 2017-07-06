@@ -11,7 +11,8 @@ import (
 
 func getTask(w http.ResponseWriter, r *http.Request) {
 	//println(r.RemoteAddr)
-	r.Close = true
+	//r.Close = true
+	defer r.Body.Close()
 	task := taskManager.Task{}
 	if taskManager.ValidateIp(r.RemoteAddr){
 		task = taskManager.GetTask(1)
@@ -29,12 +30,13 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 		//}
 		io.WriteString(w, string(b))
 	}
-	r.Body.Close()
+
 	//r.
 }
 
 func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
-	r.Close = true
+	//r.Close = true
+	defer r.Body.Close()
 	platformId := r.URL.Query().Get("platformId")
 	device := r.URL.Query().Get("device")
 	task := taskManager.GetTaskByType(platformId, device,"","")
@@ -46,11 +48,12 @@ func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
 		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
-	r.Body.Close()
+
 }
 
 func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
-	r.Close = true
+	//r.Close = true
+	defer r.Body.Close()
 	//println(r.RemoteAddr)
 	platformId := r.URL.Query().Get("platformId")
 	device := r.URL.Query().Get("device")
@@ -65,11 +68,12 @@ func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
 		//fmt.Println(string(b))
 		io.WriteString(w, string(b))
 	}
-	r.Body.Close()
+
 }
 
 func handResult(w http.ResponseWriter, r *http.Request) {
-	r.Close = true
+	//r.Close = true
+	defer r.Body.Close()
 	task_id := r.URL.Query().Get("task_id")
 	if task_id == "" {
 		io.WriteString(w, "{\"status\":\"ok\",\"message\":\"no task_id\"}")
@@ -101,14 +105,16 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 	} else {
 		io.WriteString(w, "{\"status\":\"err\",\"message\":\""+err.Error()+"\"}")
 	}
-	r.Body.Close()
+
 	// log.Info(fmt.Sprintf("remote:ip,", ...))
 }
 func forbiddenAccount(w http.ResponseWriter, r *http.Request) {
+	//r.Close = true
+	defer r.Body.Close()
 	account := r.URL.Query().Get("account")
 	taskManager.ForbiddenAccount(account)
 	io.WriteString(w,"{\"status\":\"ok\"}")
-	r.Body.Close()
+
 }
 func main() {
 	port := 19922
@@ -118,6 +124,5 @@ func main() {
 	http.HandleFunc("/handResult", handResult)
 	http.HandleFunc("/forbiddenAccount", forbiddenAccount)
 	fmt.Printf("listen at port %d", port)
-	
 	http.ListenAndServe(":19922", nil)
 }
