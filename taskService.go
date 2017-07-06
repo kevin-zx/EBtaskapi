@@ -11,7 +11,7 @@ import (
 
 func getTask(w http.ResponseWriter, r *http.Request) {
 	//println(r.RemoteAddr)
-	//r.Close = true
+	r.Close = true
 	defer r.Body.Close()
 	task := taskManager.Task{}
 	if taskManager.ValidateIp(r.RemoteAddr){
@@ -35,7 +35,7 @@ func getTask(w http.ResponseWriter, r *http.Request) {
 }
 
 func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
-	//r.Close = true
+	r.Close = true
 	defer r.Body.Close()
 	platformId := r.URL.Query().Get("platformId")
 	device := r.URL.Query().Get("device")
@@ -52,7 +52,7 @@ func getTaskByPlatform(w http.ResponseWriter, r *http.Request) {
 }
 
 func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
-	//r.Close = true
+	r.Close = true
 	defer r.Body.Close()
 	//println(r.RemoteAddr)
 	platformId := r.URL.Query().Get("platformId")
@@ -72,7 +72,7 @@ func getTaskByArgs(w http.ResponseWriter, r *http.Request) {
 }
 
 func handResult(w http.ResponseWriter, r *http.Request) {
-	//r.Close = true
+	r.Close = true
 	defer r.Body.Close()
 	task_id := r.URL.Query().Get("task_id")
 	if task_id == "" {
@@ -109,8 +109,9 @@ func handResult(w http.ResponseWriter, r *http.Request) {
 	// log.Info(fmt.Sprintf("remote:ip,", ...))
 }
 func forbiddenAccount(w http.ResponseWriter, r *http.Request) {
-	//r.Close = true
+	r.Close = true
 	defer r.Body.Close()
+
 	account := r.URL.Query().Get("account")
 	taskManager.ForbiddenAccount(account)
 	io.WriteString(w,"{\"status\":\"ok\"}")
@@ -124,5 +125,7 @@ func main() {
 	http.HandleFunc("/handResult", handResult)
 	http.HandleFunc("/forbiddenAccount", forbiddenAccount)
 	fmt.Printf("listen at port %d", port)
+	//http.DefaultClient.
+
 	http.ListenAndServe(":19922", nil)
 }
