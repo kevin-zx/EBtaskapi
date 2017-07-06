@@ -5,5 +5,7 @@ var MysqlServerInstance mysqlutil.MysqlUtil
 
 func init() {
 	//MysqlServerInstance.InitMySqlUtil("115.159.3.51",3306,"remote","Iknowthat","eb_dropdown")
-	MysqlServerInstance.InitMySqlUtil("115.159.79.85",3306,"remote","Iknowthat","eb_optimizetest")
+	//MysqlServerInstance.InitMySqlUtil("115.159.79.85",3306,"remote","Iknowthat","eb_optimizetest",)
+	MysqlServerInstance.InitMySqlUtilDetail("115.159.79.85",3306,"remote","Iknowthat","eb_optimizetest",2,6)
 }
+
