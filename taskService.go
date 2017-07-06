@@ -126,6 +126,8 @@ func main() {
 	http.HandleFunc("/forbiddenAccount", forbiddenAccount)
 	fmt.Printf("listen at port %d", port)
 	//http.DefaultClient.
-
-	http.ListenAndServe(":19922", nil)
+	server := &http.Server{Addr: ":19922", Handler: nil}
+	server.SetKeepAlivesEnabled(false)
+	server.ListenAndServe()
+	//http.ListenAndServe(":19922", nil)
 }
